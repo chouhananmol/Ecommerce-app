@@ -1,4 +1,3 @@
-const app = require("./app");
 const cloudinary = require("cloudinary");
 const dotenv = require("dotenv");
 const connectDatabase = require("./config/database");
@@ -20,6 +19,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 // Connecting Database
 connectDatabase();
 
+const app = require("./app");
 
 // const filename = fileUrlToPath(import.meta.url);
 // const dirname = path.dirname(fileUrlToPath(import.meta.url));
