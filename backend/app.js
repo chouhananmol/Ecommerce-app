@@ -33,9 +33,13 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 
+// const __dirname = path.resolve();
+
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"), function (err) {
+    res.status(500).send(err);
+  });
 });
 
 // Middleware for Error
