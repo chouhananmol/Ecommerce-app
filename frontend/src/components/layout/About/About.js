@@ -30,14 +30,14 @@ const About = () => {
         </p>
         <a
           className="github-link"
-          href="https://github.com/chouhananmol"
+          href="https://github.com/chouhananmol/Ecommerce-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Visit our GitHub Repository
         </a>
       </div>
-    
+
     </div>
   );
 };
