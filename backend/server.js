@@ -3,7 +3,7 @@ const cloudinary = require("cloudinary");
 const dotenv = require("dotenv");
 const connectDatabase = require("./config/database");
 
-const { fileUrlToPath } = require("./utils/fileUrlToPath");
+// const { fileUrlToPath } = require("fileUrlToPath");
 
 // Handling uncaught Exceptions
 process.on("uncaughtException", (err) => {
@@ -21,8 +21,8 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 connectDatabase();
 
 
-const __filename = fileUrlToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileUrlToPath(import.meta.url);
+// const __dirname = path.dirname(fileUrlToPath(import.meta.url));
 
 
 cloudinary.config({
