@@ -1,0 +1,231 @@
+/* Cart.css */
+
+/* Styles for individual cart items */
+.cartContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  width: 90%;
+  margin: auto;
+}
+
+/* Styles for quantity input and buttons */
+.cartInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.CartItemCard {
+  width: 20%;
+}
+
+.cartSubtotal {
+  display: flex;
+  padding: 0.5vmax;
+  height: 8vmax;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  font: 300 1vmax cursive;
+  color: rgba(0, 0, 0, 0.753);
+}
+
+.cartInput button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.cartInput button:hover {
+  background-color: #0056b3;
+}
+
+.cartInput input {
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 0 5px;
+  padding: 5px 0;
+}
+
+/* Cart Header Styles */
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  background-color: #343a40;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartPage {
+  padding: 5vmax;
+}
+
+.cartHeader>p {
+  margin: 10px;
+}
+
+.cartHeader>p:last-child {
+  text-align: end;
+}
+
+
+/* Styles from your previous CSS */
+.emptyCart {
+  margin: auto;
+  text-align: center;
+  padding: 10vmax;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyCart>svg {
+  font-size: 5vmax;
+  color: tomato;
+}
+
+.emptyCart>p {
+  font-size: 2vmax;
+}
+
+.emptyCart>a {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: none;
+  padding: 1vmax 3vmax;
+  cursor: pointer;
+  font: 400 1vmax "Roboto";
+  text-decoration: none;
+}
+
+.cartGrossProfit {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+}
+
+.cartGrossProfitBox {
+  border-top: 3px solid rgb(51, 51, 51);
+  margin: 1vmax 4vmax;
+  box-sizing: border-box;
+  padding: 2vmax 0;
+  display: flex;
+  font: 300 1vmax cursive;
+  color: rgba(0, 0, 0, 0.753);
+  /* font: 300 1vmax "Roboto"; */
+  justify-content: space-between;
+}
+
+.checkOutBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.checkOutBtn>button {
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  width: 40%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkOutBtn>button:hover {
+  background-color: rgba(255, 99, 71, 0.842);
+  /* border: 2px solid rgba(6, 152, 243, 0.973); */
+}
+
+/* Media Query for screens with a maximum width of 600px */
+@media screen and (max-width: 600px) {
+
+  /* Styles for individual cart items */
+  .cartContainer {
+    width: 100%;
+  }
+
+  /* Styles for quantity input and buttons */
+  .cartInput {
+    height: 20vmax;
+  }
+
+  .CartItemCard {
+    width: 100%;
+  }
+
+  .cartSubtotal {
+    padding: 1.5vmax;
+    height: 20vmax;
+    font: 300 2vmax "Roboto";
+  }
+
+  .cartInput button {
+    padding: 1.5vmax;
+    font-size: 10px;
+    margin: 0px;
+  }
+
+  .cartInput input {
+    width: 2vmax;
+    padding: 1.5vmax;
+    font: 400 1.8vmax "Roboto";
+  }
+
+  /* Cart Header Styles for Mobile */
+  .cartHeader {
+    width: 100%;
+    font: 300 1.7vmax "Roboto";
+  }
+
+  /* Other Styles */
+  .cartPage {
+    padding: 0;
+    min-height: 60vh;
+  }
+
+  .cartGrossProfit {
+    display: grid;
+    grid-template-columns: 0fr 2fr;
+  }
+
+  .cartGrossProfitBox {
+    padding: 2vmax;
+    font: 300 2vmax "Roboto";
+  }
+
+  .checkOutBtn>button {
+    padding: 2vmax 4vmax;
+    width: 100%;
+    font: 300 2vmax "Roboto";
+  }
+}

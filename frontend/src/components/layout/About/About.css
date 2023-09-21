@@ -1,0 +1,70 @@
+/* About.css */
+
+.about-container {
+  background-color: #99929273;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  padding: 2rem;
+}
+
+.about-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.about-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.github-link {
+  display: inline-block;
+  background-color: tomato;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.github-link:hover {
+  background-color: rgb(253, 79, 48);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 1rem;
+  }
+}
