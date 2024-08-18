@@ -1,4 +1,4 @@
-import React, { useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import CheckoutSteps from "./CheckoutSteps";
@@ -85,7 +85,13 @@ const Payment = () => {
 
       if (result.error) {
         payBtn.current.disabled = false;
-        toast.error(result.error.message);
+        // toast.error(result.error.message);
+        order.paymentInfo = {
+          id: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+          status: "failed",
+        };
+        dispatch(createOrder(order));
+        navigate("/success");
       } else {
         if (result.paymentIntent.status === "succeeded") {
           order.paymentInfo = {
@@ -110,7 +116,7 @@ const Payment = () => {
       dispatch(clearErrors());
     }
   }, [dispatch, error]);
- 
+
 
   return (
     <>
@@ -135,7 +141,7 @@ const Payment = () => {
             type="submit"
             className="paymentFormBtn"
             ref={payBtn}
-      >{`Pay - $${orderInfo && orderInfo.totalPrice}`}</button>
+          >{`Pay - $${orderInfo && orderInfo.totalPrice}`}</button>
         </form>
       </div>
     </>

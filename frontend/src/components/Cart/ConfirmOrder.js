@@ -28,6 +28,7 @@ const ConfirmOrder = () => {
       totalPrice,
     };
     sessionStorage.setItem("orderInfo", JSON.stringify(data));
+    // console.log("OrderConfirmed", data)
     navigate("/payment");
   };
   return (

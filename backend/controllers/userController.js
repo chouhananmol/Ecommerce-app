@@ -84,12 +84,12 @@ exports.forgotPassword = catchAsyncError(async (req, res, next) => {
     "host"
   )}/password/reset/${resetToken}`;
 
-  const message = `Your password reset token is :- \n\n ${resetPasswordUrl} \n\nIf you have not requested this email then, please ignore it.`;
+  const message = `Your password reset token is :- \n\n ${resetPasswordUrl} \n\nIf you have not requested this email then, please ignore it - CartBliss`;
 
   try {
     await sendEmail({
       email: user.email,
-      subject: `Ecommerce Password Recovery`,
+      subject: `Reset Password - CartBliss`,
       message,
     });
 

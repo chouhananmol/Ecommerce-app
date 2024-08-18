@@ -222,7 +222,7 @@ exports.deleteProduct = catchAsyncError(async (req, res, next) => {
     });
 });
 
-//cretae new review or update review
+//create new review or update review
 exports.createProductReview = catchAsyncError(async (req, res, next) => {
 
     const { rating, comment, productId } = req.body;
@@ -249,6 +249,8 @@ exports.createProductReview = catchAsyncError(async (req, res, next) => {
         product.reviews.push(review);
         product.numOfReviews = product.reviews.length;
     }
+
+    // calculate avg rating
     let avg = 0;
     product.reviews.forEach((rev) => {
         avg += rev.rating;
